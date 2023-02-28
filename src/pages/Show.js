@@ -7,22 +7,28 @@ const Show = () => {
   ////////////////////
   // Styles
   ///////////////////
-  const div = {
-    textAlign: "center",
-    border: "3px solid green",
-    width: "80%",
-    margin: "30px auto",
-  };
+  // const div = {
+  //   textAlign: "center",
+  //   border: "3px solid green",
+  //   width: "80%",
+  //   margin: "30px auto",
+  // };
 
   return (
-    <div style={div}>
-      <h1>{decision.regBody}</h1>
-      <h2>{decision.allegationType}</h2>
-      <h2>{decision.companyName}</h2>
-      <h3>{decision.decisionType}</h3>
+    <div className="container">
 
-      <div style={{ textAlign: "center" }}>
-        <h2>Update a Decision</h2>
+      <br></br>
+      <br></br>
+      <div className="container">
+        <h3>{decision.regBody}</h3>
+        <h3>{decision.allegationType}</h3>
+        <h3>{decision.companyName}</h3>
+        <h3>{decision.decisionType}</h3>
+      </div>
+
+      <div className="container">
+        <h3>Update a Decision</h3>
+
         <Form action={`/update/${decision.id}`} method="post">
           <input
             type="text"
@@ -50,14 +56,20 @@ const Show = () => {
           />
           <button>Update Decision</button>
         </Form>
-        <Form action={`/delete/${decision.id}`} method="post">
-          <button>Delete Decision</button>
-        </Form>
+
+        
+          <Form action={`/delete/${decision.id}`} method="post">
+            <button>Delete Decision</button>
+          </Form>
+      
+        
+        <Link to="/">
+        <button>Go Back</button>
+        </Link>
+
       </div>  
 
-      <Link to="/">
-        <button>Go Back</button>
-      </Link>
+
     </div>
   );
 };

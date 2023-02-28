@@ -6,18 +6,18 @@ const Decision = ({ decision }) => {
   //////////////////
   // Style Objects
   //////////////////
-  const div = {
-    textAlign: "center",
-    border: "3px solid",
-    margin: "10px auto",
-    width: "80%",
-  };
+  // const div = {
+  //   textAlign: "center",
+  //   border: "3px solid",
+  //   margin: "10px auto",
+  //   width: "80%",
+  // };
   return (
-    <div style={div}>
+    <div className="container">
       <Link to={`/${decision.id}/`}>
-        <h1>{decision.regBody}</h1>
+        <h3>{decision.regBody}</h3>
       </Link>
-      <h2>{decision.allegationType}</h2>
+      <h3>{decision.allegationType}</h3>
       <h3>ID - {decision.id}</h3>
     </div>
   );
