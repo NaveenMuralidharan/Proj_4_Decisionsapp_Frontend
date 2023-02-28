@@ -13,7 +13,7 @@ const Decision = ({ decision }) => {
   //   width: "80%",
   // };
   return (
-    <div className="container">
+    <div>
       <Link to={`/${decision.id}/`}>
         <h3>{decision.regBody}</h3>
       </Link>

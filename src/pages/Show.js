@@ -16,9 +16,12 @@ const Show = () => {
 
   return (
     <div className="container">
+    <br></br>
+    <br></br>    
+    <h1>Decisions App</h1>
+    <br></br>
+    <br></br>
 
-      <br></br>
-      <br></br>
       <div className="container">
         <h3>{decision.regBody}</h3>
         <h3>{decision.allegationType}</h3>
